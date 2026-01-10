@@ -87,7 +87,7 @@ Done ✅
 ## 📸 Preview
 
 Example:
-![Random Gusser](Assets/image.png)
+![Random Gusser](assets/image.png)
 
 
 ---
