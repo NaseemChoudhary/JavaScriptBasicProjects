@@ -59,7 +59,8 @@ temperature-converter/
 │
 ├── index.html
 ├── style.css
-└── index.js```
+└── index.js
+```
 
 ---
 ## 📦 Installation
@@ -77,10 +78,7 @@ temperature-converter/
 
 ## 📸 Preview
 
-Add a screenshot of your app here later.
-
-Example:
-
+![Temprature_Converter](Assets/image.png)
 
 ---
 
@@ -89,7 +87,7 @@ Example:
 ### UI Improvements
 
 - Smooth output animation  
-- Glow effect on result text  
+- Glow effect on result text
 - Better mobile responsiveness  
 - Light / Dark theme switch  
 
