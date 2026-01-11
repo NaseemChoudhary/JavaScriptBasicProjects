@@ -21,3 +21,6 @@ subbtn.onclick = function () {
     message.textContent = " Too Far";
   }
 };
+window.onload = () => {
+    document.getElementById("tem").focus();
+};
