@@ -1,146 +1,158 @@
+![Last Commit](https://img.shields.io/github/last-commit/NaseemChoudhary/JavaScriptBasicProjects?style=for-the-badge) ![Repo Size](https://img.shields.io/github/repo-size/NaseemChoudhary/JavaScriptBasicProjects?style=for-the-badge) ![Stars](https://img.shields.io/github/stars/NaseemChoudhary/JavaScriptBasicProjects?style=for-the-badge) ![Forks](https://img.shields.io/github/forks/NaseemChoudhary/JavaScriptBasicProjects?style=for-the-badge) 
+![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black) ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge) ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue?style=for-the-badge) ![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge) ![Built With Love](https://img.shields.io/badge/Built%20With-Love-red?style=for-the-badge)
+---
+
 # 🎲 Random Generator App
 
-A simple and stylish web app that generates random results based on different modes such as number ranges, dice rolls, and coin flips. Built using **HTML, CSS, and JavaScript**.
+A stylish and interactive **random generator web app** that supports multiple modes including **number ranges, animated dice rolls with images, and coin flips**.
+
+Built with **pure HTML, CSS, and JavaScript**, featuring a modern glassmorphism UI and smooth animations.
 
 ---
 
 ## 🚀 Features
 
-### ✅ Current Features
+### 🎯 Random Number Generator
+- Custom **minimum** and **maximum** values
+- Default values used when inputs are empty
+- Animated rolling effect before showing the final result
 
-- [x] 🎯 Random Number Generator (Custom Range)
-  - [x] User can set **minimum** value
-  - [x] User can set **maximum** value
-  - [x] Default values used if inputs are empty
+### 🎲 Dice Roll Mode (Updated)
+- Roll **any number of dice**
+- Displays numeric results
+- **Dice images added**
+- **Realistic dice roll animation** (spin, bounce, settle)
+- Responsive layout for multiple dice
 
-- [x] 🎲 Dice Roll Modes
-  - [x] Single Dice Roll (1–6)
-  - [x] Double Dice Roll (2 dice)
-  - [x] Triple Dice Roll (3 dice)
+### 🪙 Coin Flip Mode
+- Randomly returns **Head** or **Tail**
 
-- [x] 🪙 Coin Flip Mode
-  - [x] Randomly returns **Head** or **Tail**
+### 🎛 Mode Selector
+- Dropdown menu to switch between modes
+- UI updates automatically
+- Inputs dynamically show or hide based on selected mode
 
-- [x] 🎛 Mode Selector
-  - [x] Dropdown to switch between modes
-  - [x] UI updates automatically when mode changes
+### 🎨 Modern UI
+- Glassmorphism card design
+- Gradient background
+- Hover and click animations
+- Floating card animation
+- Centered, responsive layout
 
-- [x] 🎨 Modern UI Design
-  - [x] Glassmorphism style card
-  - [x] Gradient background
-  - [x] Hover and click animations on button
-  - [x] Responsive center layout
+---
+
+## 🆕 Updates in the Latest Version
+
+- Added **visual dice images**
+- Implemented **real dice roll animation**
+- Improved dice spacing and layout
+- Updated UI styling
+- Added preview image to the repository
 
 ---
 
 ## 🧠 How It Works
 
-- Uses `Math.random()` to generate random values
-- JavaScript controls:
+- Uses `Math.random()` to generate results
+- JavaScript handles:
   - Mode switching
-  - Showing/hiding range inputs
-  - Displaying results
+  - Dice generation
+  - Input validation
+  - UI updates
 - CSS handles:
   - Animations
-  - Layout
   - Glass blur effects
+  - Layout and responsiveness
 
 ---
 
 ## 🛠 Tech Stack
 
-- HTML5
-- CSS3 (Glassmorphism + Animations)
-- Vanilla JavaScript
+- HTML5  
+- CSS3 (Glassmorphism & animations)  
+- Vanilla JavaScript  
 
-No frameworks, no libraries — just clean fundamentals 💪
-
----
+No frameworks. No libraries. Just fundamentals.
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-number-counter/
+random-generator/
 │
 ├── index.html
 ├── style.css
-└── index.js
+├── index.js
+└── Assets/
+    └── dice images (1–6)
 ```
----
 
+---
 
 ## 📦 Installation
 
 1. Clone or download the repository
-2. Make sure these files are in the same folder:
+2. Ensure the following files exist:
    - `index.html`
    - `style.css`
    - `index.js`
+   - `Assets/` (dice images)
 3. Open `index.html` in your browser
-
-Done ✅
 
 ---
 
 ## 📸 Preview
 
-Example:
-![Random Gusser](assets/image.png)
+![Random Generator Preview](Assets/image.png)
 
-
----
-
-## ✨ Planned Future Features
-
-### 🔥 UI / UX Improvements
-
-- [ ] 🎞 Roll animation before result appears
-- [ ] ✨ Glow effect when number is shown
-- [ ] 📱 Improved mobile responsiveness
-- [ ] 🌈 Theme switcher (dark / neon / retro)
-
-### 🔊 Sound & Feedback
-
-- [ ] 🔊 Dice rolling sound effect
-- [ ] 🪙 Coin flip sound
-- [ ] 🎉 Win-style sound for special results
-
-### 🎮 New Modes
-
-- [ ] 🎯 Random Picker from List (names, tasks, etc.)
-- [ ] 🎴 Card draw mode (Ace–King)
-- [ ] 🎰 Slot machine mode
-- [ ] 🔢 Even/Odd challenge mode
-
-### ⚙ Advanced Features
-
-- [ ] 📊 History log of previous rolls
-- [ ] 📋 Copy result to clipboard
-- [ ] 🎥 Rolling animation using intervals
-- [ ] ⚡ Keyboard shortcut for rolling
+> Preview shows the **updated version with dice images and animations**.
 
 ---
 
-## 🎯 Goals of This Project
+## ✨ Planned Features
+
+### UI / UX
+- Improved mobile responsiveness
+- Theme switcher (dark / neon / retro)
+
+### Sound & Feedback
+- Dice rolling sound
+- Coin flip sound
+
+### New Modes
+- Random picker from a list
+- Card draw mode
+- Slot machine mode
+- Even/Odd challenge mode
+
+### Advanced
+- Roll history log
+- Copy result to clipboard
+- Keyboard shortcuts
+
+---
+
+## 🎯 Project Goals
 
 - Practice JavaScript logic
-- Learn DOM manipulation
-- Improve CSS design skills
+- Improve DOM manipulation
+- Learn CSS animations
 - Build fun interactive tools
 
 ---
 
 ## 📜 License
 
-This project is open-source and free to use for learning and personal projects.
+Open-source and free to use for learning and personal projects.
 
 ---
 
 ## 🙌 Author
 
-Built by **Mario** —  
-Jack of all trades, all master 😤🔥
+**Naseem**  
+Jack of all trades 
 
-Keep rolling. Keep coding. 🚀
+**Keep rolling. Keep coding. 🚀**
+
+---

@@ -8,17 +8,21 @@
   </head>
   <body>
     <div id="main">
-      <p id="h1">🔢</p>
+      <div id="h1">
+      </div>
+      <div id="Images"></div>
       <button id="random">⚙️ Roll</button><br /><br />
       <label>MODE:</label>
       <select id="mode">
         <option value="range">Range</option>
-        <option value="dice1">🎲 dice</option>
-        <option value="dice2">🎲🎲</option>
-        <option value="dice3">🎲🎲🎲</option>
+        <option value="dice">Dice</option>
        <option value="coin">Coin Flip</option>
     </select>
         <br>
+      <div id="DiceRoller">
+        <label id="diceNo">Number of dice: </label>
+        <input id="NoDice" placeholder="Enter the Number of Dice" type="number">
+      </div>
       <div id="rangeInputs">
         <label>MIN :</label>
         <input id="min" type="number" /><br />
