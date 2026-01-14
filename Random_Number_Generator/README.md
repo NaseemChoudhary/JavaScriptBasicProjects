@@ -104,7 +104,7 @@ random-generator/
 
 ## 📸 Preview
 
-![Random Generator Preview](Assets/image.png)
+![Random Generator Preview](assets/image.png)
 
 > Preview shows the **updated version with dice images and animations**.
 
