@@ -78,8 +78,8 @@ There’s nothing to install, no accounts required, and no data ever leaves the 
 ---
 
 ## Live Demo
-**Demo URL:**
-`https://your-demo-url.example`
+
+[**Demo URL:**](https://naseemchoudhary.github.io/JavaScriptBasicProjects/Random_Password_Generator/)
 
 ---
 
