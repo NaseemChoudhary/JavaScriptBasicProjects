@@ -75,9 +75,10 @@ The clock runs entirely on the client side and updates every second with zero ex
 
 ## Live Demo
 
-**GitHub Pages:**  
-https://naseemchoudhary.github.io/JavaScriptBasicProjects/DIGITAL_CLOCK/
 
+**GitHub Pages:**  
+
+>https://naseemchoudhary.github.io/JavaScriptBasicProjects/Digital_Clock/
 ---
 
 ## Installation & Setup
