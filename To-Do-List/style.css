@@ -54,7 +54,7 @@ h1 {
   gap: 10px;
 }
 
-input#taskInput {
+#taskInput {
   flex-grow: 1;
   padding: 12px 16px;
   border-radius: var(--radius);
@@ -66,11 +66,11 @@ input#taskInput {
   transition: border-color 0.3s ease;
 }
 
-input#taskInput:focus {
+#taskInput:focus {
   border-color: var(--accent-color);
 }
 
-button#submit {
+#submit {
   padding: 12px 20px;
   border: none;
   border-radius: var(--radius);
@@ -81,15 +81,15 @@ button#submit {
   transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-button#submit:hover {
+#submit:hover {
   background-color: var(--accent-hover);
 }
 
-button#submit:active {
+#submit:active {
   transform: scale(0.96);
 }
 
-ul#list {
+#list {
   list-style: none;
   display: flex;
   flex-direction: column;
