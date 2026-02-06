@@ -1,0 +1,145 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Background */
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2,
+    #89f7fe
+  );
+}
+
+/* Glass Card */
+.game {
+    width: clamp(250px, 60vw, 36 0px);
+
+  padding: 35px 30px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.25);
+
+  color: white;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* Scoreboard */
+.score-board {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+  padding: 10px 15px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.score-board span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Buttons */
+.player-choice {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+
+  font-size: 40px;
+
+  border: none;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-6px) scale(1.1);
+
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* Display */
+.computer-choice {
+  display: flex;
+  justify-content: space-around;
+
+  margin-bottom: 20px;
+  font-size: 55px;
+}
+
+
+/* Animation */
+.shake {
+  animation: shake 0.6s ease;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0); }
+}
+
+/* Result */
+#result {
+  font-size: 17px;
+  font-weight: 600;
+
+  padding: 10px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border-radius: 12px;
+
+  backdrop-filter: blur(8px);
+}
