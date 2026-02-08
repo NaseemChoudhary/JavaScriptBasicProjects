@@ -1,7 +1,8 @@
 const buttons = document.querySelectorAll(".btn");
 const computerChoiceDisplay = document.querySelector(".computer-choice");
 const resultDisplay = document.getElementById("result");
-const playerScore = document.getElementById('')
+const playerScore = document.getElementById('playerScore');
+const computerScore = document.getElementById('computerScore');
 
 const choices = ["👊", "✋", "✌️"];
 let shuffleInterval;
@@ -30,14 +31,16 @@ function playGame(playerChoice) {
     ) {
         resultDisplay.textContent = "You Win 🎉";
         player++;
+        playerScore.textContent = player;
     } 
     else {
         resultDisplay.textContent = "You Lose 😢";
         computer++;
+        computerScore.textContent = computer;
     }
 
     stopShuffle();
-
+    setTimeout(startShuffle, 1000);
 }
 
 // Shuffle animation

@@ -1,0 +1,172 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+/* Background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111827, #1f2933);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* App Card */
+.main {
+  width: 100%;
+  max-width: 420px;
+
+  padding: 1.5rem;
+
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  color: #f9fafb;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Fixed Cell */
+.fixed {
+  background: #d1d5db;
+  color: #111;
+
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 6px;
+
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Board */
+#board {
+  width: 100%;
+  aspect-ratio: 1;
+
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 4px;
+
+  padding: 8px;
+
+  background: #020617;
+  border-radius: 12px;
+
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Cells */
+#board input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  text-align: center;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  color: #e5e7eb;
+
+  background: #1e293b;
+
+  border-radius: 5px;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+
+  cursor: pointer;
+
+  transition: 
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+/* Hover */
+#board input:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+/* Active */
+#board input:focus {
+  background: #020617;
+
+  transform: scale(0.96);
+
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* 3x3 Lines */
+#board input:nth-child(3n) {
+  margin-right: 4px;
+}
+
+#board input:nth-child(n+19):nth-child(-n+27),
+#board input:nth-child(n+46):nth-child(-n+54) {
+  margin-bottom: 4px;
+}
+
+/* Buttons */
+#button {
+  margin-top: 1.2rem;
+
+  display: flex;
+  gap: 0.8rem;
+}
+
+#button button {
+  flex: 1;
+
+  padding: 0.7rem;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 10px;
+
+  color: #f9fafb;
+
+  background: #1f2933;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+
+  cursor: pointer;
+
+  transition: 
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+/* Button Hover */
+#button button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+/* Button Press */
+#button button:active {
+  transform: scale(0.95);
+
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.7);
+}
+

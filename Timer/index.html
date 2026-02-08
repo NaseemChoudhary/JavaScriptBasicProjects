@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+    <audio src="Assets/beep.mp3" id="beep"></audio>
+    <div class="main">
+        <div id="timerInput">
+            <input placeholder="00" id="hours" min=0>:
+            <input placeholder="00" id="min" min=0>:
+            <input placeholder="00" id="sec" min=0><br>
+        </div>
+        <div id="Timer">
+            <input id="hoursOut"readonly>:
+            <input id="minOut"readonly>:
+            <input id="secOut"readonly>:
+            <input id="miliOut"readonly>    
+        </div>
+        <div>
+    <button id="stop">▶</button>
+    <button id="reset">⟲</button>
+</div>
+
+    </div>
+        <script src="index.js"></script>
+</body>
+</html>
