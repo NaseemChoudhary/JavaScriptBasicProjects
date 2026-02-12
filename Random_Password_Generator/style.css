@@ -1,0 +1,149 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Page background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #293461d3, #987cb4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Main container */
+.container {
+  background: rgba(127, 67, 196, 0.205);
+  backdrop-filter: blur(20px);
+  padding: 30px 35px;
+  border-radius: 20px;
+  width: 360px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  transform: 0.3 ease;
+}
+
+.container:hover{
+  background: rgba(163, 111, 231, 0.308);
+    transform: scale(0.95s);
+}
+
+/* Title */
+.container p {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Length */
+.length {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.length input {
+  width: 80px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Options */
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.check {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.25s ease;
+}
+
+.check input {
+  display: none;
+}
+
+.check span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.check:hover {
+  background: rgba(107, 179, 238, 0.925);
+}
+
+.check input:checked + span {
+  background: linear-gradient(135deg, #a654dd, #da6fba);
+  border-color: transparent;
+}
+
+/* Generate button */
+#bttn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+#bttn:hover {
+  transform: translateY(-2px);
+}
+
+/* Result */
+.result {
+  display: flex;
+  gap: 10px;
+}
+
+#Output {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+#copy {
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  color: white;
+  cursor: pointer;
+}
+
+#copy:hover {
+  transform: scale(1.05);
+}
+
+/* Copy message */
+#copyMsg {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #a8ff78;
+}

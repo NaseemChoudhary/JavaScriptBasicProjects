@@ -1,0 +1,132 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Background */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #6a11cb, #000000 70%);
+  align-items: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Glass Card */
+#main {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 45px 55px;
+  border-radius: 25px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  animation: float 4s ease-in-out infinite;
+  width: 320px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Label */
+label {
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+/* Input */
+input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-radius: 60px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #0b1b00;
+  background: linear-gradient(135deg, #20e637, #4d7535);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45),
+              inset 0 0 10px rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Restart button style */
+#restart {
+  margin-top: 12px;
+  background: linear-gradient(135deg, #ff4e50, #f9d423);
+  color: black;
+  display: none;
+}
+
+/* Output text */
+#output {
+  margin-top: 15px;
+  font-weight: 700;
+  min-height: 22px;
+}
+
+/* ===== Feedback Effects ===== */
+
+.shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.glow-red {
+  box-shadow: 0 0 20px red;
+}
+
+.glow-yellow {
+  box-shadow: 0 0 20px yellow;
+}
+
+.glow-green {
+  box-shadow: 0 0 25px #20ff4d;
+  animation: win 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes win {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}

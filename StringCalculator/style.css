@@ -1,0 +1,175 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Background */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    padding: clamp(12px, 3vw, 24px);
+
+    /* Gradient background */
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+    );
+}
+
+/* Main Glass Card */
+.main {
+    width: 100%;
+    max-width: clamp(320px, 90vw, 480px);
+
+    padding: clamp(16px, 3vw, 25px);
+
+    border-radius: clamp(14px, 3vw, 20px);
+
+    height: fit-content;
+
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    /* Soft Shadow */
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+
+    text-align: center;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+
+    height: clamp(40px, 6vw, 50px);
+
+    padding: 0 clamp(12px, 3vw, 18px);
+
+    border-radius: clamp(12px, 3vw, 15px);
+
+    border: 2px solid rgba(0, 242, 254, 0.7);
+
+    font-size: clamp(14px, 2.5vw, 16px);
+
+    color: white;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 0 15px rgba(0, 242, 254, 0.5);
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+input:focus {
+    background: rgba(255, 255, 255, 0.22);
+
+    box-shadow:
+        0 0 8px #00f2fe,
+        inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+
+    transform: scale(1.02);
+}
+
+/* Placeholder */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Output Text */
+.output {
+    margin: 2px;
+
+    font-size: clamp(15px, 2.5vw, 17px);
+
+    font-weight: 500;
+
+    color: #e8faff;
+}
+
+/* Filter Section */
+#filter {
+    margin-top: clamp(10px, 3vw, 15px);
+    display: block;
+}
+
+/* Label */
+#filter label {
+    display: block;
+
+    margin-bottom: clamp(4px, 1.5vw, 6px);
+
+    font-size: clamp(12px, 2vw, 14px);
+
+    color: #c9f7ff;
+}
+
+/* Paragraphs */
+p {
+    margin: clamp(5px, 2vw, 8px) 2px;
+
+    font-size: clamp(13px, 2.2vw, 15px);
+
+    color: #dffcff;
+}
+
+/* Hidden Filter */
+#wordFilter {
+    display: none;
+}
+
+/* Button */
+button {
+    margin: clamp(4px, 1.5vw, 8px);
+
+    padding:
+        clamp(8px, 1.5vw, 10px)
+        clamp(10px, 2vw, 15px);
+
+    border: none;
+
+    border-radius: clamp(10px, 2.5vw, 12px);
+
+    font-size: clamp(13px, 2.5vw, 15px);
+
+    background: linear-gradient(
+        135deg,
+        #00f2fe,
+        #4facfe
+    );
+
+    color: #000;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}

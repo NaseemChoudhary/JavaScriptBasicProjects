@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e0e0e0; /* Match background for skeuomorphic effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.clock {
+  width: clamp(250px, 80vw, 450px);
+  aspect-ratio: 1 / 1;
+  background: #e0e0e0;
+  border-radius: 50%;
+  position: relative;
+  border: 8px solid #ececec;
+  
+  /* Neumorphic Shadows: Outer for lift, Inner for depth */
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff,
+             inset 10px 10px 15px #bebebe,
+             inset -10px -10px 15px #ffffff;
+}
+
+.numbers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #555;
+  font-size: clamp(1.3rem, 3vw, 0.6rem);
+  font-weight: 800;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tick {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #999;
+  height: 3%;
+  width: 2px;
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform-origin: 50% 100%;
+  z-index: 5;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hour {
+  width: 1.8%;
+  height: 25%;
+  background: #333;
+}
+
+.min {
+  width: 1.2%;
+  height: 35%;
+  background: #555;
+}
+
+.sec {
+  width: 0.6%;
+  height: 42%;
+  background: #d90429;
+}
+
+.center.dot {
+  width: 4%;
+  height: 4%;
+  background: #222;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
