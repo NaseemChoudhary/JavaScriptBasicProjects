@@ -1,0 +1,98 @@
+:root{
+    --bgColor: hsla(0, 13%, 85%, 0.865);
+    --color: rgb(15, 14, 14);
+    --bordercolor: rgb(55, 40, 40);
+    --btntext: rgb(245, 207, 207);
+    --cardColor: rgba(15,14,13,0.43);
+}
+
+.dark{
+    --bgColor: #0b0a0af8;
+    --color: white;
+    --bordercolor: rgb(212, 199, 199);
+    --cardColor: rgba(75, 70, 65, 0.73);
+    
+}
+
+
+main{
+    border-radius: 10px;
+    border: 2px solid var(--bordercolor);
+    font-style: italic;
+    text-align: center;
+}
+
+body{
+    background: var(--bgColor);
+    color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.card{
+    background: var(--cardColor);
+    color: var(--color);
+    border: 1px solid var(--bordercolor);
+}
+
+#intoggle{
+    display: none;
+}
+
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.toggle-label {
+    width: 60px;
+    height: 34px;
+
+    margin: 10px;
+    background: linear-gradient(to right, #fde047, #60a5fa);
+
+    border-radius: 50px;
+
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 6px;
+
+    transition: 0.4s ease;
+}
+
+.ball {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+
+    background: white;
+    color: black;
+
+    border-radius: 50%;
+
+    position: absolute;
+    left: 4px;
+
+    transition: 0.4s ease;
+
+    box-shadow: 0 2px 8px rgba(145, 96, 96, 0.3);
+}
+
+/* When Dark Mode */
+#intoggle:checked + .toggle-label {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+/* Move ball */
+#intoggle:checked + .toggle-label .ball {
+    transform: translateX(36px);
+}

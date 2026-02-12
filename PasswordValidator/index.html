@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+
+        <h2>Login</h2>
+
+        <form id="form">
+
+            <div class="field">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter email" required>
+            </div>
+
+            <div class="field password-box">
+                <label>Password</label>
+
+                <div class="password-wrapper">
+                    <input type="password" id="inputForPassword" placeholder="Enter password" required>
+                    <button type="button" id="toggleBtn">👁️</button>
+                </div>
+            </div>
+
+            <p id="message"></p>
+
+            <button type="submit" id="submit">Login</button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
