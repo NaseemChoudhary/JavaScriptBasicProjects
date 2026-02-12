@@ -8,7 +8,7 @@ toggleBtn.addEventListener("click", () => {
 
     if (password.type === "password") {
         password.type = "text";
-        toggleBtn.textContent = "𓁹";
+        toggleBtn.textContent = "𓁺";
     } 
     else {
         password.type = "password";
@@ -22,7 +22,7 @@ email.addEventListener("input", () => {
 
     message.textContent = "";
     if (!email.value.includes("@")) {
-        message.textContent = "Enter a valid email";
+            message.textContent = "Enter a valid email";
         message.style.color = "red";
         message.style.opacity = "1";
 

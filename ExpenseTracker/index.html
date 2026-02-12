@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseTracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ExpenseTracker</h1>
+    
+    <div class="container">
+        <div class=toggle>
+            <label>Add Expense?</label>
+            <input type="checkbox" id="toggleAdd">
+            <label class="toggle-label" for="toggleAdd">
+                <span class="ball">➕</span>
+            </label>
+        </div>
+        <div class="add">
+            <input type="text" id="ExpenseName" placeholder="Expense for?" required> 
+            <input type="number" id="amount" placeholder=" ₹ Amount?" required>
+            <input type="date" id="expenseDate" required>
+            <select id="ExpenseType" required>
+                <option value="" disabled selected>Expense Type</option>
+                <option value="fixed">Fixed</option>
+                <option value="variable">Variable</option>
+                <option value="living">Living</option>
+                <option value="transport">Transportation</option>
+                <option value="entertainment">Entertainment</option>
+            </select>
+            <select id="paymentMethod">
+                <optgroup>
+                    <option value="" disabled selected>Payment Method</option>
+                    <option value="cash">Cash</option>
+                    <option value="upi">UPI</option>
+                    <option value="card">Card</option>
+                    <option value="bank">Bank Transfer</option>
+                </optgroup>
+            </select>
+            <input type="text" id="note" placeholder="Note (optional)">
+            <button id="addBtn">➕</button>
+        </div>
+    </div>
+    <div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Expense Name<br>
+                    <input type="text" data-filter="name" class="filter">
+                </th>
+                <th>Amount (₹)<br>
+                    <input type="number" data-filter="amount" class="filter">
+                </th>
+                <th>Date<br>
+                    <input type="date" data-filter="date" class="filter">
+                </th>
+                <th>Type<br>
+                    <input type="text" data-filter="type" class="filter">
+                </th>
+                <th>PaymentMode<br>
+                    <input type="text" data-filter="pay" class="filter">
+                </th>
+                <th>Note</th>
+                <th>Action</th>
+                </tr>
+                </thead>
+        <tbody id="expenseBody"></tbody>
+        <tfoot>
+        <tr>
+            <th colspan="2">Total</th>
+            <th id="expensefoot">₹0</th>
+            <th colspan="4"></th>
+            <th> <button id="exportBtn">𝄜</button></th>
+        </tr>
+    </tfoot>
+    </table>
+
+</div>
+
+    <script src="index.js"></script>
+</body>
+</html>

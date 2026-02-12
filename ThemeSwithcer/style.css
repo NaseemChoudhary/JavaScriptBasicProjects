@@ -1,5 +1,9 @@
 :root{
-    --bgColor: hsla(0, 13%, 85%, 0.865);
+    --bgColor: 
+  radial-gradient(circle at top left, #f6b1d6, transparent 60%),
+  radial-gradient(circle at top right, #a7c7ff, transparent 60%),
+  radial-gradient(circle at bottom left, #ffd6a5, transparent 60%),
+  linear-gradient(135deg, #f6b1d6, #e9a4ff, #a7c7ff, #ffd6a5);;
     --color: rgb(15, 14, 14);
     --bordercolor: rgb(55, 40, 40);
     --btntext: rgb(245, 207, 207);
@@ -7,7 +11,11 @@
 }
 
 .dark{
-    --bgColor: #0b0a0af8;
+    --bgColor: 
+  radial-gradient(circle at top left, #6b234af5, transparent 60%),
+  radial-gradient(circle at top right, #1e4995f1, transparent 60%),
+  radial-gradient(circle at bottom left, #be853fdd, transparent 60%),
+  linear-gradient(135deg, #432937fb, #5f1c7650, #1f365f6b, #825b2b69);;
     --color: white;
     --bordercolor: rgb(212, 199, 199);
     --cardColor: rgba(75, 70, 65, 0.73);
@@ -53,7 +61,7 @@ body{
     height: 34px;
 
     margin: 10px;
-    background: linear-gradient(to right, #fde047, #60a5fa);
+    background: var(--bgColor);
 
     border-radius: 50px;
 
