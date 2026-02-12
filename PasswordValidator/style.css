@@ -97,9 +97,10 @@ input:focus {
 #toggleBtn {
     width: 45px;
     height: 100%;
-
+    font-weight: 800px;
     background: none;
     border: none;
+    text-align: center;
 
     cursor: pointer;
 
