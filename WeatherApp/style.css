@@ -1,0 +1,341 @@
+/* ============================
+   PREMIUM WEATHER APP THEME
+   ============================ */
+
+:root {
+
+    /* Background */
+    --bg-main:
+      radial-gradient(circle at top, #2c3e50, #000000),
+      linear-gradient(135deg, #0f2027, #203a43);
+
+    /* Glass */
+    --glass-bg: rgba(255,255,255,0.15);
+    --glass-border: rgba(255,255,255,0.25);
+
+    /* Accent */
+    --accent: #74ebd5;
+    --accent-hover: #9face6;
+
+    /* Text */
+    --text-main: #ffffff;
+    --text-soft: #f1f3f3;
+
+    /* Error */
+    --error: #ff6b6b;
+}
+
+
+/* ============================
+   RESET
+   ============================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+
+/* ============================
+   BODY
+   ============================ */
+
+body {
+
+    background: var(--bg-main);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text-main);
+
+    transition: background 0.8s ease;
+}
+
+
+/* ============================
+   HEADER
+   ============================ */
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+
+    background: linear-gradient(135deg,#ffffff,#c7ecee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ============================
+   INPUT CARD
+   ============================ */
+
+.input {
+
+    margin: 15px;
+    padding: 22px 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid var(--glass-border);
+    border-radius: 22px;
+
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+
+/* ============================
+   INPUT
+   ============================ */
+
+input {
+
+    padding: 13px 15px;
+    font-size: 15px;
+
+    border-radius: 12px;
+    border: none;
+
+    background: rgba(255,255,255,0.25);
+    color: rgba(255, 255, 255, 0.711);
+
+    min-width: 190px;
+
+    transition: 0.3s ease;
+}
+
+input::placeholder {
+    color: #ecd5d5;
+}
+
+input:focus {
+
+    outline: none;
+
+    box-shadow: 0 0 12px rgba(255,255,255,0.6);
+    transform: scale(1.03);
+}
+
+
+/* ============================
+   BUTTON
+   ============================ */
+
+button {
+
+    background: linear-gradient(135deg,var(--accent),var(--accent-hover));
+    border: none;
+
+    padding: 10px 24px;
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    color: #1e272e;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+
+    transform: scale(1.1);
+
+    box-shadow: 0 0 22px rgba(116,235,213,0.7);
+}
+
+
+/* ============================
+   OUTPUT CARD
+   ============================ */
+
+.output {
+
+    display: none;
+
+    margin-top: 30px;
+    padding: 45px;
+
+    min-width: 300px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.22),
+        rgba(255,255,255,0.08)
+    );
+
+    backdrop-filter: blur(25px);
+
+    border-radius: 32px;
+    border: 1px solid rgba(255,255,255,0.3);
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    box-shadow:
+        0 20px 65px rgba(0,0,0,0.7),
+        inset 0 0 25px rgba(255,255,255,0.12);
+
+    transition: all 0.4s ease;
+}
+
+
+.output.active {
+
+    display: flex;
+
+    animation: popIn 0.7s ease forwards;
+}
+
+
+@keyframes popIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+.output:hover {
+
+    transform: translateY(-12px) scale(1.05);
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,0.85),
+        inset 0 0 30px rgba(255,255,255,0.15);
+}
+
+
+/* ============================
+   TEXT
+   ============================ */
+
+h3 {
+
+    font-size: 2.3rem;
+    margin-bottom: 6px;
+}
+
+
+p {
+
+    margin: 5px 0;
+    font-size: 1.4rem;
+
+    color: var(--text-soft);
+}
+
+
+
+#Emoji {
+
+    font-size: 2rem;
+    margin: 14px 0;
+
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.6));
+
+    animation: float 3s infinite ease-in-out;
+}
+
+
+@keyframes float {
+
+    0% { transform: translateY(0); }
+
+    50% { transform: translateY(-10px); }
+
+    100% { transform: translateY(0); }
+}
+
+
+/* ============================
+   ERROR
+   ============================ */
+
+.errormessage {
+
+    margin-top: 12px;
+
+    color: var(--error);
+
+    font-size: 1.3rem;
+}
+
+
+
+.cloudy {
+
+    --bg-main:
+      radial-gradient(circle at top,#dfe6e9,#b2bec3 40%,transparent 75%),
+      linear-gradient(135deg,#636e72,#2f3640,#353b48);
+}
+
+
+
+.snowy {
+
+    --bg-main:
+      radial-gradient(circle at top,#ffffff,#ecf0f1 40%,transparent 75%),
+      linear-gradient(135deg,#dff9fb,#c7ecee,#a5dff9);
+}
+
+
+.thunder {
+
+    --bg-main:
+      radial-gradient(circle at top,#7f8fa6,#2f3640 50%,transparent 80%),
+      linear-gradient(135deg,#0c0c0c,#232526,#3d3d3d);
+}
+
+
+/* ============================
+   MOBILE
+   ============================ */
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .input {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+
+    .output {
+        width: 90%;
+        padding: 28px;
+    }
+}
+

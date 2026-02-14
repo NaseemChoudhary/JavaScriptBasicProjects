@@ -48,7 +48,12 @@ label{
 }
 
 .add{
+    max-width: 600px;
     display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
     gap: 8px    
 }
 
@@ -143,9 +148,6 @@ button {
 #exportBtn:hover {
     opacity: 0.9;
 }
-/* ======================
-   BEAUTIFUL RESPONSIVE TABLE
-====================== */
 
 .table-wrapper {
     width: 100%;
@@ -218,7 +220,7 @@ tfoot th {
 
 /* Delete Button */
 td button {
-    background: #ff4d4d;
+    background: #fb6e6e;
     color: white;
     padding: 6px 10px;
     border-radius: 6px;
@@ -226,16 +228,12 @@ td button {
 }
 
 td button:hover {
-    background: #e60000;
+    background: #f70101;
     transform: scale(1.1);
 }
 
 
-/* ======================
-   MOBILE CARD STYLE
-====================== */
-
-@media (max-width: 768px) {
+@media (max-width: 850px) {
 
     table {
         min-width: 100%;

@@ -20,7 +20,7 @@ const headers = document.querySelectorAll("thead th");
 
 
 addInput.addEventListener("click", ()=>{
-    addDiv.style.display = addInput.checked ? "block" : "none";
+    addDiv.style.display = addInput.checked ? "flex" : "none";
 });
 
 
@@ -107,7 +107,7 @@ function applyFilters(){
             <td data-label="Type">${item.type}</td>
             <td data-label="Payment">${item.pay}</td>
             <td data-label="Note">${item.note}</td>
-            <td data-label="Action" ><button onclick="remove(${index})">Delete</button></td>
+            <td data-label="Action" ><button onclick="remove(${index})">🗑</button></td>
             `;
 
             tableBody.appendChild(row);
