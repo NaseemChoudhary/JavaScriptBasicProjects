@@ -1,0 +1,175 @@
+/* ===============================
+   Reset & Base
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+    color: #0f172a;
+}
+
+
+/* ===============================
+   Header
+================================ */
+header {
+    background: #020617;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+
+/* ===============================
+   Main Layout
+================================ */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    gap: 20px;
+}
+
+
+/* ===============================
+   Input Card
+================================ */
+.input {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.input:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ===============================
+   Inputs
+================================ */
+select,
+input {
+    flex: 1;
+    min-width: 110px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5f5;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+    background: #f8fafc;
+    text-align: center;
+}
+
+option{
+    text-align: left;
+}
+select:focus,
+input:focus {
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.25);
+}
+
+
+/* ===============================
+   Button
+================================ */
+#convertbttn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+#convertbttn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(37,99,235,0.4);
+}
+
+#convertbttn:active {
+    transform: scale(0.98);
+}
+
+
+/* ===============================
+   Output
+================================ */
+#Output {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #020617;
+    min-height: 24px;
+    text-align: center;
+}
+
+
+/* ===============================
+   Footer
+================================ */
+footer {
+    background: #020617;
+    color: #cbd5f5;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 3px 0;
+}
+
+
+/* ===============================
+   Mobile Responsive
+================================ */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .input {
+        padding: 20px;
+    }
+
+    select,
+    input {
+        width: 100%;
+    }
+
+}
