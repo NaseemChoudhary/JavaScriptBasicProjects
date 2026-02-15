@@ -1,0 +1,158 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Beautiful Background */
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: "Segoe UI", sans-serif;
+
+  background:
+    radial-gradient(circle at top left, #f6b1d6, transparent 60%),
+    radial-gradient(circle at top right, #a7c7ff, transparent 60%),
+    radial-gradient(circle at bottom left, #ffd6a5, transparent 60%),
+    linear-gradient(135deg, #f6b1d6, #e9a4ff, #a7c7ff, #ffd6a5);
+}
+
+/* Main Container */
+main {
+  
+  padding: 30px 40px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+}
+
+/* Game Board */
+.gameBoard {
+  margin: 20px 0;
+  padding: 20px;
+
+  background: rgba(207, 129, 220, 0.6);
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 16px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  box-shadow: 
+    0 12px 28px rgba(0, 0, 0, 0.3),
+    inset 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.3s ease;
+}
+
+.gameBoard:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* Pieces */
+.piece {
+  background: linear-gradient(145deg, #f7d2ff, #f2b6ff);
+
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 52px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  border-radius: 14px;
+
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+  transition: all 0.2s ease;
+}
+
+/* Hover Effect */
+.piece:hover {
+  background: linear-gradient(145deg, #fbbcF7, #f2a4ff);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transform: translateY(-3px);
+}
+
+/* Click Effect */
+.piece:active {
+  transform: scale(0.94);
+}
+
+/* O Color */
+.piece.O {
+  color: #6a00ff;
+  text-shadow: 0 0 8px rgba(106,0,255,0.6);
+}
+
+/* X Color */
+.piece.X {
+  color: #ff0055;
+  text-shadow: 0 0 8px rgba(255,0,85,0.6);
+}
+
+/* Winner Glow */
+.win {
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 8px #fff;
+  }
+  to {
+    box-shadow: 0 0 25px #ff00ff;
+  }
+}
+
+/* Buttons */
+button {
+  margin: 10px;
+  padding: 8px 18px;
+
+  background: linear-gradient(135deg, #ff7fd8, #ffb3ff);
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff6fcf, #ffa6ff);
+  transform: scale(1.12);
+}
+
+/* Text */
+p {
+  font-size: 1.1rem;
+  color: rgb(180, 40, 90);
+  font-weight: 600;
+  margin: 8px 0;
+}

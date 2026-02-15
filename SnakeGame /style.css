@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Page Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Canvas */
+canvas {
+    width: 400px;
+    height: 400px;
+    border: 3px solid whitesmoke;
+    background: #000;
+    max-width: 90vw;
+    max-height: 90vw;
+}
+
+/* Controls (Hidden by Default) */
+.controls {
+    margin-top: 15px;
+    text-align: center;
+    display: none;
+}
+
+/* Buttons */
+button {
+    font-size: clamp(22px, 6vw, 32px);
+    padding: 14px 18px;
+    margin: 6px;
+    border-radius: 12px;
+    border: none;
+    background: #333;
+    color: white;
+    min-width: 60px;
+}
+
+button:active {
+    background: #555;
+    transform: scale(0.95);
+}
+
+/* 📱 MOBILE MODE */
+@media (max-width: 500px) {
+
+    /* Show buttons */
+    .controls {
+        display: block;
+    }
+
+    /* Smaller canvas */
+    canvas {
+        width: 90vw;
+        height: 90vw;
+        max-width: 350px;
+        max-height: 350px;
+    }
+}
