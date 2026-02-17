@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteGenerator</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+    <h1>Quote Generator</h1>
+    <div class="controls">
+        <input placeholder="Search by author..."id="authorName">
+        <select id="theme"> 
+            <option value="All">All Themes</option>
+        </select>
+        <select id="category">
+            <option value="All">All Categories</option>
+        </select>
+        <button id="search">Search</button>
+        <button id="random">Random</button>
+    </div>
+    <div class="card-stack" id="cardStack"></div>
+        <button id="skipBtn">Next</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
