@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naseem Choudhary</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="Nav">
+      <a href="#about" class="button" >about</a>
+      <a href="#projects" class="button">Projects</a>
+      <a href="#Skills" class="button">Skills</a>
+      <a href="#Education" class="button">Education</a>
+      <a href="#Contacts" class="button">Contacts</a>
+    </div>
+      </nav>
+  </header>
+
+  <section id="about">
+    <h2>I am Naseem Choudhary</h2>
+    <h3>Passionate about learning new things and a great man</h3>
+    <img src="images\pinlk.jpg" alt="ProfileImage">
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here are something i have built over the time</p>
+    <div class="project-list">
+      <div class="project-card">project1</div>
+      <div class="project-card">Project2</div>
+      <div class="project-card">Prjects3</div>
+    </div>
+  </section>
+
+  <section id="Skills">
+    <h2>SKills</h2>
+    <h3>Techical skils</h3>
+      <ol>
+      <li>C-Programming</li>
+      <li>Python</li>
+      <li>Web development</li>
+      <li>MySQL</li>
+      <li>Data Structure</li>
+    </ol>
+    <h3>Soft skills</h3>
+    <ul>
+      <li>Communication</li>
+      <li>Teaching</li>
+      <li>HardWorking</li>
+    </ul>
+  </section>
+  <section id="Contacts">
+    <div>
+      <label>Name:</label> <input type="text" placeholder="Enter Your Name"><br>
+      <label>Email:</label> <input type="email" placeholder="xyz@gmail.com"><br>
+      <label>Message:</label> 
+      <textarea type="textareax" placeholder="Type YOur Message here"></textarea><br>
+      <button class="button">Submit</button>
+    </div>
+  </section>
+
+  <!-- HTML (paste into <body>) -->
+<section id="education" class="education-section">
+  <h2>Education</h2>
+
+  <div class="timeline">
+    <a href="#sem1" class="dot" aria-controls="sem1" title="Semester 1">1</a>
+    <div class="line"></div>
+    <a href="#sem2" class="dot" aria-controls="sem2" title="Semester 2">2</a>
+    <div class="line"></div>
+    <a href="#sem3" class="dot" aria-controls="sem3" title="Semester 3">3</a>
+    <div class="line"></div>
+    <a href="#sem4" class="dot" aria-controls="sem4" title="Semester 4">4</a>
+  </div>
+
+  <div class="cards">
+    <article id="sem1" class="card" tabindex="-1" aria-live="polite">
+      <h3>Semester 1</h3>
+      <p><strong>Major:</strong> Computer Science — Introductory courses</p>
+      <p><strong>Highlights:</strong> HTML & CSS basics, Programming 1, Math</p>
+      <p><strong>GPA:</strong> 9.2</p>
+      <a class="close-link" href="#education" aria-label="Close semester 1">Close ✕</a>
+    </article>
+
+    <article id="sem2" class="card" tabindex="-1" aria-live="polite">
+      <h3>Semester 2</h3>
+      <p><strong>Major:</strong> Computer Science — Core foundations</p>
+      <p><strong>Highlights:</strong> Data Structures, Discrete Math</p>
+      <p><strong>GPA:</strong> 9.0</p>
+      <a class="close-link" href="#education" aria-label="Close semester 2">Close ✕</a>
+    </article>
+
+    <article id="sem3" class="card" tabindex="-1" aria-live="polite">
+      <h3>Semester 3</h3>
+      <p><strong>Major:</strong> Computer Science — Intermediate</p>
+      <p><strong>Highlights:</strong> Databases, Web Development (HTML/CSS)</p>
+      <p><strong>GPA:</strong> 9.4</p>
+      <a class="close-link" href="#education" aria-label="Close semester 3">Close ✕</a>
+    </article>
+
+    <article id="sem4" class="card" tabindex="-1" aria-live="polite">
+      <h3>Semester 4</h3>
+      <p><strong>Major:</strong> Computer Science — Advanced</p>
+      <p><strong>Highlights:</strong> Algorithms, Operating Systems</p>
+      <p><strong>GPA:</strong> 9.3</p>
+      <a class="close-link" href="#education" aria-label="Close semester 4">Close ✕</a>
+    </article>
+  </div>
+</section>
+    <div class="contact-social">
+      <h3>Connect with me</h3>
+      <p>
+        <a class="button" href="https://github.com/NaseemChoudhary" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="button" href="https://www.linkedin.com/in/naseem-choudhary-08a654392" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+      <p class="note">Replace the GitHub URL above with your actual GitHub profile if different.</p>
+    </div>
+<!-- Set default theme at load -->
+<script>
+
+  // quick utility: set 'gradient' or 'dark' or 'light' (remove attribute to use :root defaults)
+  function setTheme(Name){
+    if(name) document.documentElement.setAttribute('data-theme', name);
+    else document.documentElement.removeAttribute('data-theme');
+  }
+
+  // example: choose gradient by default
+  setTheme('  ');
+
+  // example to toggle (call from a button)
+  // setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'gradient' : 'dark');
+</script>
+
+  </body>
+
+</html>

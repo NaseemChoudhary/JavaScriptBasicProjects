@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+
+  <meta name="description" content="Personal portfolio — frontend developer. Projects, skills, contact." />
+
+  <style>
+    /* -------------------------
+       Base / Reset (small)
+       ------------------------- */
+    :root{
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-dark: #1e40af;
+      --shadow: 0 8px 24px rgba(16,24,40,0.06);
+      --radius: 10px;
+      --container: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#0f172a;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      scroll-behavior:smooth;
+    }
+    a{color:var(--accent); text-decoration:none}
+    img{max-width:100%; display:block}
+
+    /* -------------------------
+       Layout
+       ------------------------- */
+    .container{max-width:var(--container); margin:0 auto; padding:24px}
+    header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:40;
+      border-bottom:1px solid rgba(15,23,42,0.04);
+      backdrop-filter: blur(4px);
+    }
+    .header-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:var(--container); margin:0 auto; padding:12px 24px}
+
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{
+      width:44px; height:44px; border-radius:10px; background:var(--accent);
+      display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.15);
+    }
+    .brand h1{font-size:16px; margin:0}
+    .brand p{margin:0; font-size:12px; color:var(--muted)}
+
+    nav.desktop{display:flex; gap:18px; align-items:center}
+    nav.desktop a{font-size:14px; color:rgb(17,24,39); padding:8px; border-radius:6px}
+    nav.desktop a:hover{background:rgba(37,99,235,0.06); color:var(--accent-dark)}
+
+    .cta{
+      background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; font-size:14px;
+      box-shadow: 0 6px 18px rgba(37,99,235,0.12);
+    }
+
+    /* mobile toggle */
+    .mobile-toggle{display:none; background:transparent; border:0; padding:8px}
+
+    /* -------------------------
+       Hero
+       ------------------------- */
+    .hero{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:center; padding:48px 24px}
+    .hero .lead{font-size:14px; color:var(--accent); font-weight:600}
+    .hero h2{font-size:34px; margin:8px 0 12px}
+    .hero p{color:var(--muted); max-width:56ch}
+
+    .hero-visual{
+      background:linear-gradient(180deg, #ffffff, #f8fbff);
+      border-radius:16px; padding:24px; box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center;
+      min-height:240px;
+    }
+
+    /* -------------------------
+       Sections
+       ------------------------- */
+    section{padding:40px 24px}
+    h3{margin:0 0 12px; font-size:20px}
+    .muted{color:var(--muted)}
+
+    /* skills grid */
+    .skills-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+    .skill-card{background:var(--card); padding:14px; border-radius:12px; box-shadow:var(--shadow)}
+
+    /* projects */
+    .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
+    .project{background:var(--card); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column}
+    .project .meta{padding:12px}
+    .project .meta h4{margin:0 0 6px}
+    .project .meta p{margin:0; color:var(--muted); font-size:14px}
+    .project .actions{display:flex; gap:8px; margin-top:10px}
+
+    /* contact form */
+    form{max-width:760px}
+    input, textarea{
+      width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(15,23,42,0.08);
+      background:#fff; font-size:14px;
+    }
+    textarea{resize:vertical}
+    .form-row{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+    .form-actions{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:8px}
+
+    .btn{background:var(--accent); color:#fff; padding:10px 14px; border-radius:10px; border:0; cursor:pointer; font-weight:600}
+    .btn.secondary{background:#fff; color:var(--accent); border:1px solid rgba(37,99,235,0.12)}
+
+    .status{color:#b91c1c; font-size:14px}
+
+    /* footer */
+    footer{padding:24px; color:var(--muted); font-size:13px; text-align:center}
+
+    /* -------------------------
+       Responsive
+       ------------------------- */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; text-align:left}
+      .hero-visual{min-height:200px}
+      nav.desktop{display:none}
+      .mobile-toggle{display:block}
+    }
+    @media (max-width:560px){
+      .form-row{grid-template-columns:1fr}
+    }
+
+    /* focus ring for keyboard users */
+    :focus{outline:2px solid transparent; box-shadow:0 0 0 4px rgba(37,99,235,0.14)}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">YN</div>
+        <div>
+          <h1>Your Name</h1>
+          <p>Frontend Developer</p>
+        </div>
+      </div>
+
+      <nav class="desktop" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#projects">See work</a>
+      </nav>
+
+      <button class="mobile-toggle" id="menu-btn" aria-controls="mobile-menu" aria-expanded="false" title="Toggle menu">
+        <svg id="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg id="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="display:none"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" style="display:none; padding:8px 24px; border-top:1px solid rgba(15,23,42,0.04); background:#fff">
+      <a style="display:block; padding:8px 0" href="#about">About</a>
+      <a style="display:block; padding:8px 0" href="#skills">Skills</a>
+      <a style="display:block; padding:8px 0" href="#projects">Projects</a>
+      <a style="display:block; padding:8px 0" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero container" id="home">
+      <div>
+        <div class="lead">Hi — I'm</div>
+        <h2>Your Name</h2>
+        <p>Frontend developer building fast, accessible and maintainable web interfaces using HTML, CSS and vanilla JavaScript. I focus on clarity, performance and user experience.</p>
+
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn secondary" href="#contact">Get in touch</a>
+        </div>
+
+        <div style="margin-top:14px; display:flex; gap:8px; color:var(--muted); font-size:13px">
+          <div style="background:#fff; padding:6px 10px; border-radius:8px; box-shadow:var(--shadow)">Available for hire</div>
+          <div style="background:#fff; padding:6px 10px; border-radius:8px; box-shadow:var(--shadow)">Remote</div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <!-- simple illustration using SVG -->
+        <svg width="220" height="220" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profile illustration">
+          <rect x="0" y="0" width="200" height="200" rx="16" fill="#fff"/>
+          <g transform="translate(25,20)" fill="none" stroke="#111827" stroke-width="1.2">
+            <circle cx="75" cy="45" r="30" fill="#f8fafc"/>
+            <path d="M12 160c10-30 50-40 82-40s70 10 82 40" stroke-linecap="round"/>
+            <rect x="0" y="0" width="150" height="100" rx="10" opacity="0"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="container" aria-labelledby="about-heading">
+      <h3 id="about-heading">About</h3>
+      <p class="muted">Short bio — who you are, what you build, tech you use, and what you're looking for. Example: 3+ years building production websites, performance improvements, and accessible components.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="container" aria-labelledby="skills-heading">
+      <h3 id="skills-heading">Skills</h3>
+      <div class="skills-grid" style="margin-top:12px">
+        <div class="skill-card">
+          <strong>Frontend</strong>
+          <div class="muted" style="margin-top:6px">HTML • CSS • JavaScript • Responsive design</div>
+        </div>
+        <div class="skill-card">
+          <strong>Performance</strong>
+          <div class="muted" style="margin-top:6px">Critical CSS • Image optimization • Lighthouse</div>
+        </div>
+        <div class="skill-card">
+          <strong>Tools</strong>
+          <div class="muted" style="margin-top:6px">Git • npm • build tooling</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container" aria-labelledby="projects-heading">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px">
+        <h3 id="projects-heading">Selected Projects</h3>
+        <a href="#" class="muted">See all →</a>
+      </div>
+
+      <div class="projects-grid" style="margin-top:16px">
+        <!-- Project 1 -->
+        <article class="project" tabindex="0">
+          <img src="https://via.placeholder.com/800x420.png?text=Project+1" alt="Project 1 screenshot">
+          <div class="meta">
+            <h4>Project One</h4>
+            <p>Static marketing site with a focused performance build — reduced Largest Contentful Paint by 40%.</p>
+            <div class="actions">
+              <a class="btn" href="#" style="padding:6px 10px; font-size:13px">Live demo</a>
+              <a class="btn secondary" href="#" style="padding:6px 10px; font-size:13px">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project" tabindex="0">
+          <img src="https://via.placeholder.com/800x420.png?text=Project+2" alt="Project 2 screenshot">
+          <div class="meta">
+            <h4>Project Two</h4>
+            <p>Component library built with accessibility and reusability in mind. Includes keyboard-first modals and tooltips.</p>
+            <div class="actions">
+              <a class="btn" href="#" style="padding:6px 10px; font-size:13px">Live demo</a>
+              <a class="btn secondary" href="#" style="padding:6px 10px; font-size:13px">Source</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Contact</h3>
+      <p class="muted">Want to work together or have a quick question? Send a message or email: <strong>you@example.com</strong></p>
+
+      <form id="contact-form" aria-describedby="form-status" style="margin-top:14px">
+        <div class="form-row">
+          <div>
+            <label class="muted" for="name">Name</label>
+            <input id="name" name="name" required placeholder="Your name">
+          </div>
+          <div>
+            <label class="muted" for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <label class="muted" for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or question"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <div id="form-status" class="status" role="status" aria-live="polite"></div>
+          <div style="margin-left:auto">
+            <button type="submit" class="btn">Send message</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div style="max-width:var(--container); margin:0 auto; padding:12px 24px">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap">
+          <div>© <span id="year"></span> Your Name</div>
+          <div style="color:var(--muted); display:flex; gap:12px">
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // ---------- Mobile menu toggle ----------
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    menuBtn && menuBtn.addEventListener('click', () => {
+      const open = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!open));
+      mobileMenu.style.display = open ? 'none' : 'block';
+      iconOpen.style.display = open ? 'inline' : 'none';
+      iconClose.style.display = open ? 'none' : 'inline';
+      if (!open) {
+        // focus first link for keyboard users
+        const first = mobileMenu.querySelector('a');
+        first && first.focus();
+      } else {
+        menuBtn.focus();
+      }
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu && mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+        menuBtn.setAttribute('aria-expanded', 'false');
+        iconOpen.style.display = 'inline';
+        iconClose.style.display = 'none';
+      });
+    });
+
+    // ---------- Contact form validation ----------
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      statusEl.textContent = '';
+      statusEl.style.color = '#b91c1c'; // red for errors
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!name || !email || !message) {
+        statusEl.textContent = 'Please complete all fields.';
+        return;
+      }
+
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!emailOk) {
+        statusEl.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      // simulate send (replace this with real API call)
+      statusEl.style.color = '#166534'; // green
+      statusEl.textContent = 'Message sent. Thank you!';
+      form.reset();
+      setTimeout(() => statusEl.textContent = '', 4000);
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
